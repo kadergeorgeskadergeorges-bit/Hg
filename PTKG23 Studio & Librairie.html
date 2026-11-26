@@ -1,0 +1,1575 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PTKG23 — Traoré Kader Georges | E-books, Musique & Création</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#fffbeb',
+              100: '#fef3c7',
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+              900: '#78350f',
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #09090b;
+      color: #f4f4f5;
+      overflow-x: hidden;
+    }
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #18181b;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #3f3f46;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #f59e0b;
+    }
+    .glass {
+      background: rgba(24, 24, 27, 0.85);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-amber-500 selection:text-zinc-950">
+
+  <!-- NOTIFICATION TOAST (Remplace alert()) -->
+  <div id="toast-container" class="fixed top-4 right-4 left-4 sm:left-auto sm:w-96 z-[100] flex flex-col gap-2 pointer-events-none"></div>
+
+  <!-- ===================================================================== -->
+  <!-- 1. PORTAIL D'ENTRÉE SÉCURISÉ (AVANT LE MENU PRINCIPAL)                -->
+  <!-- ===================================================================== -->
+  <section id="auth-portal" class="min-h-screen flex flex-col justify-between bg-gradient-to-br from-zinc-950 via-zinc-900 to-zinc-950 px-4 py-6 sm:px-8">
+    <!-- En-tête du portail -->
+    <header class="max-w-6xl w-full mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-amber-500 to-orange-600 flex items-center justify-center font-extrabold text-zinc-950 text-lg shadow-lg shadow-amber-500/20">
+          P23
+        </div>
+        <div>
+          <span class="font-extrabold tracking-tight text-lg text-white block leading-none">PTKG23</span>
+          <span class="text-xs text-amber-400 font-medium">Traoré Kader Georges</span>
+        </div>
+      </div>
+      <button onclick="openPrivacyModal()" class="text-xs sm:text-sm text-zinc-400 hover:text-amber-400 underline underline-offset-4 transition p-2">
+        Confidentialité & Conditions
+      </button>
+    </header>
+
+    <!-- Contenu central du portail -->
+    <main class="max-w-6xl w-full mx-auto my-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      <!-- Présentation de la plateforme -->
+      <div class="lg:col-span-7 space-y-6">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-semibold">
+          <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+          Portail Officiel • Création, E-books & Musique
+        </div>
+
+        <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
+          L’univers littéraire, musical et visuel de <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500">PTKG23</span>.
+        </h1>
+
+        <p class="text-zinc-300 text-sm sm:text-base leading-relaxed max-w-2xl">
+          Bienvenue sur la plateforme officielle de <strong>Traoré Kader Georges (PTKG23)</strong>. Accédez à une bibliothèque numérique inspirante, écoutez des créations musicales originales en continu, explorez des visuels exclusifs et publiez vos propres œuvres en toute sécurité.
+        </p>
+
+        <!-- Points forts / Fonctionnalités du site -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+          <div class="p-4 rounded-2xl bg-zinc-900/90 border border-zinc-800 flex items-start gap-3">
+            <div class="p-2.5 rounded-xl bg-amber-500/15 text-amber-400 shrink-0">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-sm text-white">Librairie & Lecture E-books</h3>
+              <p class="text-xs text-zinc-400 mt-0.5">Extraits gratuits, lecture intégrée et achat via Amazon KDP, Payhip & Chariow.</p>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-zinc-900/90 border border-zinc-800 flex items-start gap-3">
+            <div class="p-2.5 rounded-xl bg-emerald-500/15 text-emerald-400 shrink-0">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/></svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-sm text-white">Studio Musical Continu</h3>
+              <p class="text-xs text-zinc-400 mt-0.5">Lecteur audio persistant en bas d'écran pendant toute votre navigation.</p>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-zinc-900/90 border border-zinc-800 flex items-start gap-3">
+            <div class="p-2.5 rounded-xl bg-sky-500/15 text-sky-400 shrink-0">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-sm text-white">Publication Créateur</h3>
+              <p class="text-xs text-zinc-400 mt-0.5">Publiez vos livres (format KDP/Payhip) et visuels avec votre code unique.</p>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-zinc-900/90 border border-zinc-800 flex items-start gap-3">
+            <div class="p-2.5 rounded-xl bg-purple-500/15 text-purple-400 shrink-0">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-sm text-white">Profil Sécurisé & Partage</h3>
+              <p class="text-xs text-zinc-400 mt-0.5">Identifiant membre, photo, téléphone et liens viraux Facebook, TikTok, YouTube & Instagram.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carte d'authentification / Accès -->
+      <div class="lg:col-span-5">
+        <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 sm:p-8 shadow-2xl">
+          <!-- Onglets Connexion / Inscription -->
+          <div class="grid grid-cols-2 gap-2 p-1 rounded-2xl bg-zinc-950 border border-zinc-800 mb-6">
+            <button id="tab-login-btn" onclick="switchAuthTab('login')" class="py-2.5 rounded-xl text-sm font-semibold bg-amber-500 text-zinc-950 transition">
+              Connexion
+            </button>
+            <button id="tab-register-btn" onclick="switchAuthTab('register')" class="py-2.5 rounded-xl text-sm font-semibold text-zinc-400 hover:text-white transition">
+              Inscription
+            </button>
+          </div>
+
+          <!-- Formulaire Connexion -->
+          <form id="login-form" onsubmit="handleLogin(event)" class="space-y-4">
+            <div>
+              <label class="block text-xs font-medium text-zinc-400 mb-1.5">Nom complet ou Code Membre</label>
+              <input type="text" id="login-identifier" required placeholder="Ex: Traoré Kader Georges ou PTKG-2301" class="w-full px-4 py-3 rounded-xl bg-zinc-950 border border-zinc-800 text-white text-sm focus:outline-none focus:border-amber-500" />
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-zinc-400 mb-1.5">Numéro de téléphone</label>
+              <input type="tel" id="login-phone" required placeholder="Ex: +226 70 00 00 00" class="w-full px-4 py-3 rounded-xl bg-zinc-950 border border-zinc-800 text-white text-sm focus:outline-none focus:border-amber-500" />
+            </div>
+            <label class="flex items-start gap-2.5 text-xs text-zinc-400 cursor-pointer pt-1">
+              <input type="checkbox" id="login-consent" checked required class="mt-0.5 rounded accent-amber-500" />
+              <span>J'accepte la <button type="button" onclick="openPrivacyModal()" class="text-amber-400 underline">politique de confidentialité</button> et les conditions d'utilisation de PTKG23.</span>
+            </label>
+            <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-zinc-950 font-bold text-sm shadow-lg shadow-amber-500/20 transition">
+              Entrer sur la plateforme
+            </button>
+          </form>
+
+          <!-- Formulaire Inscription -->
+          <form id="register-form" onsubmit="handleRegister(event)" class="space-y-4 hidden">
+            <div>
+              <label class="block text-xs font-medium text-zinc-400 mb-1.5">Nom complet *</label>
+              <input type="text" id="reg-name" required placeholder="Votre nom et prénom" class="w-full px-4 py-3 rounded-xl bg-zinc-950 border border-zinc-800 text-white text-sm focus:outline-none focus:border-amber-500" />
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <label class="block text-xs font-medium text-zinc-400 mb-1.5">Numéro de téléphone *</label>
+                <input type="tel" id="reg-phone" required placeholder="+226 ..." class="w-full px-4 py-3 rounded-xl bg-zinc-950 border border-zinc-800 text-white text-sm focus:outline-none focus:border-amber-500" />
+              </div>
+              <div>
+                <label class="block text-xs font-medium text-zinc-400 mb-1.5">Code créateur/membre</label>
+                <input type="text" id="reg-code" placeholder="Auto-généré si vide" class="w-full px-4 py-3 rounded-xl bg-zinc-950 border border-zinc-800 text-amber-400 font-mono text-sm focus:outline-none focus:border-amber-500" />
+              </div>
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-zinc-400 mb-1.5">Photo de profil (optionnel)</label>
+              <input type="file" id="reg-photo" accept="image/*" class="w-full text-xs text-zinc-400 file:mr-3 file:py-2 file:px-3 file:rounded-lg file:border-0 file:bg-zinc-800 file:text-amber-400 file:font-semibold hover:file:bg-zinc-700" />
+            </div>
+            <label class="flex items-start gap-2.5 text-xs text-zinc-400 cursor-pointer">
+              <input type="checkbox" id="reg-consent" checked required class="mt-0.5 rounded accent-amber-500" />
+              <span>J'accepte la <button type="button" onclick="openPrivacyModal()" class="text-amber-400 underline">politique de confidentialité</button> et le traitement sécurisé de mon profil.</span>
+            </label>
+            <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-zinc-950 font-bold text-sm shadow-lg shadow-amber-500/20 transition">
+              Créer mon compte & Accéder
+            </button>
+          </form>
+
+          <!-- Séparateur Accès Rapide -->
+          <div class="relative my-6">
+            <div class="absolute inset-0 flex items-center"><div class="w-full border-t border-zinc-800"></div></div>
+            <div class="relative flex justify-center text-xs"><span class="bg-zinc-900 px-3 text-zinc-500">Accès rapide immédiat</span></div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <button type="button" onclick="quickAccess('creator')" class="p-3 rounded-xl bg-zinc-800/80 hover:bg-zinc-800 border border-amber-500/30 text-left transition group">
+              <span class="text-xs font-bold text-amber-400 block group-hover:translate-x-0.5 transition">Mode Créateur PTKG23</span>
+              <span class="text-[11px] text-zinc-400">Traoré Kader Georges</span>
+            </button>
+            <button type="button" onclick="quickAccess('visitor')" class="p-3 rounded-xl bg-zinc-800/80 hover:bg-zinc-800 border border-zinc-700 text-left transition group">
+              <span class="text-xs font-bold text-white block group-hover:translate-x-0.5 transition">Accès Visiteur / Lecteur</span>
+              <span class="text-[11px] text-zinc-400">Explorer & Écouter</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="max-w-6xl w-full mx-auto text-center text-xs text-zinc-500 pt-4 border-t border-zinc-900">
+      © 2026 PTKG23 — Traoré Kader Georges. Tous droits réservés • Espace sécurisé.
+    </footer>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 2. APPLICATION PRINCIPALE (APRÈS LE PORTAIL D'ENTRÉE)                 -->
+  <!-- ===================================================================== -->
+  <div id="main-app" class="hidden flex-1 flex flex-col pb-28">
+
+    <!-- Barre de navigation supérieure -->
+    <header class="sticky top-0 z-40 glass border-b border-zinc-800/90">
+      <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
+        <!-- Logo -->
+        <div class="flex items-center gap-2.5 cursor-pointer" onclick="navigateTo('catalog')">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-500 to-orange-600 flex items-center justify-center font-extrabold text-zinc-950 text-base shadow">
+            P23
+          </div>
+          <div>
+            <h1 class="font-extrabold text-white text-base sm:text-lg leading-none">PTKG23</h1>
+            <p class="text-[11px] text-amber-400 font-medium">Traoré Kader Georges</p>
+          </div>
+        </div>
+
+        <!-- Réseaux Sociaux Officiels (Desktop) -->
+        <div class="hidden md:flex items-center gap-2">
+          <a href="https://www.facebook.com/search/top?q=PTKG23" target="_blank" rel="noopener noreferrer" title="Facebook officiel PTKG23" class="p-2 rounded-xl bg-zinc-900 hover:bg-blue-600/20 text-zinc-300 hover:text-blue-400 border border-zinc-800 transition">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@ptkg23" target="_blank" rel="noopener noreferrer" title="TikTok officiel PTKG23" class="p-2 rounded-xl bg-zinc-900 hover:bg-pink-600/20 text-zinc-300 hover:text-pink-400 border border-zinc-800 transition">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/@PTKG23" target="_blank" rel="noopener noreferrer" title="YouTube officiel PTKG23" class="p-2 rounded-xl bg-zinc-900 hover:bg-red-600/20 text-zinc-300 hover:text-red-400 border border-zinc-800 transition">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/ptkg23" target="_blank" rel="noopener noreferrer" title="Instagram officiel PTKG23" class="p-2 rounded-xl bg-zinc-900 hover:bg-fuchsia-600/20 text-zinc-300 hover:text-fuchsia-400 border border-zinc-800 transition">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg>
+          </a>
+        </div>
+
+        <!-- Boutons d'actions rapides & Profil -->
+        <div class="flex items-center gap-2">
+          <button onclick="navigateTo('publish')" class="px-3.5 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-zinc-950 font-bold text-xs sm:text-sm flex items-center gap-1.5 shadow transition">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+            <span>Publier</span>
+          </button>
+
+          <button onclick="navigateTo('profile')" class="flex items-center gap-2 pl-2 pr-3 py-1.5 rounded-xl bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 transition">
+            <img id="header-avatar" src="https://placehold.co/80x80/f59e0b/09090b?text=PT" alt="Profil" class="w-7 h-7 rounded-lg object-cover" />
+            <div class="text-left hidden sm:block">
+              <p id="header-username" class="text-xs font-semibold text-white leading-none truncate max-w-[110px]">Membre</p>
+              <p id="header-usercode" class="text-[10px] text-amber-400 font-mono leading-tight">PTKG-0000</p>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <!-- Menu de navigation principal (Mobile & Desktop) -->
+      <nav class="max-w-7xl mx-auto px-4 pb-2.5 flex items-center gap-2 overflow-x-auto hide-scrollbar">
+        <button data-nav="catalog" onclick="navigateTo('catalog')" class="nav-pill px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-zinc-800 text-amber-400 border border-amber-500/30 whitespace-nowrap transition">
+          Catalogue & Boutique
+        </button>
+        <button data-nav="publish" onclick="navigateTo('publish')" class="nav-pill px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold text-zinc-400 hover:text-white bg-zinc-900/70 border border-zinc-800 whitespace-nowrap transition">
+          Publier un E-book / Image
+        </button>
+        <button data-nav="profile" onclick="navigateTo('profile')" class="nav-pill px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold text-zinc-400 hover:text-white bg-zinc-900/70 border border-zinc-800 whitespace-nowrap transition">
+          Mon Profil Créateur
+        </button>
+        <button onclick="lockPortal()" class="ml-auto px-3 py-2 rounded-xl text-xs font-medium text-zinc-400 hover:text-red-400 bg-zinc-900/70 border border-zinc-800 whitespace-nowrap transition">
+          Portail / Déconnexion
+        </button>
+      </nav>
+    </header>
+
+    <!-- =================================================================== -->
+    <!-- VUE 1 : CATALOGUE FILTRABLE (E-BOOKS, MUSIQUE, IMAGES)              -->
+    <!-- =================================================================== -->
+    <main id="view-catalog" class="max-w-7xl w-full mx-auto px-4 py-6 space-y-6">
+      <!-- Bannière d'accueil créateur -->
+      <div class="rounded-3xl bg-gradient-to-r from-zinc-900 via-zinc-900 to-amber-950/40 border border-zinc-800 p-5 sm:p-7 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+        <div class="space-y-2 max-w-2xl">
+          <span class="inline-block px-3 py-1 rounded-full bg-amber-500/15 text-amber-400 text-xs font-semibold">
+            Boutique Officielle & Studio Créatif
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white">
+            Découvrez les œuvres de <span class="text-amber-400">Traoré Kader Georges</span>
+          </h2>
+          <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed">
+            Lisez des extraits gratuits, achetez vos e-books sur Amazon KDP, Payhip ou Chariow, écoutez les morceaux de PTKG23 en continu ou publiez vos propres créations.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-2.5">
+          <button onclick="navigateTo('publish')" class="px-4 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-zinc-950 font-bold text-xs sm:text-sm shadow-lg shadow-amber-500/20 transition">
+            + Publier un livre ou visuel
+          </button>
+          <a href="https://ptkg.myshopify.com" target="_blank" rel="noopener noreferrer" class="px-4 py-3 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-white font-semibold text-xs sm:text-sm border border-zinc-700 transition">
+            Boutique Externe PTKG
+          </a>
+        </div>
+      </div>
+
+      <!-- Barre de recherche et Filtres -->
+      <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+        <!-- Onglets de catégories -->
+        <div class="flex items-center gap-2 overflow-x-auto hide-scrollbar pb-1 sm:pb-0">
+          <button onclick="setCategoryFilter('all')" data-filter="all" class="filter-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-amber-500 text-zinc-950 whitespace-nowrap transition">
+            Tout le catalogue
+          </button>
+          <button onclick="setCategoryFilter('ebook')" data-filter="ebook" class="filter-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-zinc-900 text-zinc-300 hover:text-white border border-zinc-800 whitespace-nowrap transition">
+            📚 E-books
+          </button>
+          <button onclick="setCategoryFilter('music')" data-filter="music" class="filter-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-zinc-900 text-zinc-300 hover:text-white border border-zinc-800 whitespace-nowrap transition">
+            🎵 Musique PTKG23
+          </button>
+          <button onclick="setCategoryFilter('image')" data-filter="image" class="filter-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-zinc-900 text-zinc-300 hover:text-white border border-zinc-800 whitespace-nowrap transition">
+            🖼️ Images & Visuels
+          </button>
+        </div>
+
+        <!-- Champ recherche -->
+        <div class="relative w-full sm:w-72">
+          <input type="text" id="search-input" oninput="renderCatalog()" placeholder="Rechercher un titre, thème, mot-clé..." class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-zinc-900 border border-zinc-800 text-sm text-white placeholder-zinc-500 focus:outline-none focus:border-amber-500" />
+          <svg class="w-4 h-4 text-zinc-500 absolute left-3.5 top-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 11A6 6 0 115 11a6 6 0 0112 0z"/></svg>
+        </div>
+      </div>
+
+      <!-- Grille du catalogue -->
+      <div id="catalog-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <!-- Injecté dynamiquement par JS -->
+      </div>
+    </main>
+
+    <!-- =================================================================== -->
+    <!-- VUE 2 : FORMULAIRE COMPLET DE PUBLICATION (E-BOOK / IMAGE)          -->
+    <!-- =================================================================== -->
+    <section id="view-publish" class="hidden max-w-4xl w-full mx-auto px-4 py-6">
+      <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-5 sm:p-8 shadow-xl space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-zinc-800 pb-5">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-amber-400">Studio d'Édition PTKG23</span>
+            <h2 class="text-2xl font-extrabold text-white mt-1">Publier un E-book ou un Visuel</h2>
+            <p class="text-xs sm:text-sm text-zinc-400 mt-1">Inspiré des standards Amazon KDP et Payhip. Votre création apparaît immédiatement dans le catalogue.</p>
+          </div>
+          <button onclick="navigateTo('catalog')" class="self-start px-3.5 py-2 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-xs font-semibold text-zinc-300 transition">
+            ← Retour au catalogue
+          </button>
+        </div>
+
+        <form id="publish-form" onsubmit="handlePublishSubmit(event)" class="space-y-5">
+          <!-- Type de publication -->
+          <div>
+            <label class="block text-xs font-semibold text-zinc-300 mb-2">Type de création *</label>
+            <div class="grid grid-cols-2 gap-3">
+              <label class="cursor-pointer">
+                <input type="radio" name="pub-type" value="ebook" checked onchange="togglePublishFields()" class="peer sr-only" />
+                <div class="p-3.5 rounded-2xl bg-zinc-950 border border-zinc-800 peer-checked:border-amber-500 peer-checked:bg-amber-500/10 text-center transition">
+                  <span class="text-sm font-bold text-white block">📚 E-book / Livre numérique</span>
+                  <span class="text-[11px] text-zinc-400">Format KDP, Payhip & Chariow</span>
+                </div>
+              </label>
+              <label class="cursor-pointer">
+                <input type="radio" name="pub-type" value="image" onchange="togglePublishFields()" class="peer sr-only" />
+                <div class="p-3.5 rounded-2xl bg-zinc-950 border border-zinc-800 peer-checked:border-amber-500 peer-checked:bg-amber-500/10 text-center transition">
+                  <span class="text-sm font-bold text-white block">🖼️ Image / Visuel Artistique</span>
+                  <span class="text-[11px] text-zinc-400">Illustration, couverture, affiche</span>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Titre & Sous-titre -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-medium text-zinc-300 mb-1.5">Titre de l'œuvre *</label>
+              <input type="text" id="pub-title" required placeholder="Ex: Les clés de la persévérance" class="w-full px-4 py-3 rounded-xl bg-zinc-950 border border-zinc-800 text-white text-sm focus:outline-none focus:border-amber-500" />
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-zinc-300 mb-1.5">Sous-titre (optionnel)</label>
+              <input type="text" id="pub-subtitle" placeholder="Ex: Guide pratique pour transformer sa vie" class="w-full px-4 py-3 rounded-xl bg-zinc-950 border border-zinc-800 text-white text-sm focus:outline-none focus:border-amber-500" />
+            </div>
+          </div>
+
+          <!-- Auteur & Code Créateur -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-medium text-zinc-300 mb-1.5">Auteur / Créateur *</label>
+              <input type="text" id="pub-author" required placeholder="Traoré Kader Georges (PTKG23)" class="w-full px-4 py-3 rounded-xl bg-zinc-950 border border-zinc-800 text-white text-sm focus:outline-none focus:border-amber-500" />
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-zinc-300 mb-1.5">Catégorie *</label>
+              <select id="pub-category" class="w-full px-4 py-3 rounded-xl bg-zinc-950 border border-zinc-800 text-white text-sm focus:outline-none focus:border-amber-500">
+                <option value="Développement personnel">Développement personnel</option>
+                <option value="Sagesse & Philosophie">Sagesse & Philosophie</option>
+                <option value="Entrepreneuriat & Finance">Entrepreneuriat & Finance</option>
+                <option value="Roman & Poésie">Roman & Poésie</option>
+                <option value="Art Visuel & Design">Art Visuel & Design</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Langue, Prix & ISBN (Champs KDP/Payhip) -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div>
+              <label class="block text-xs font-medium text-zinc-300 mb-1.5">Langue *</label>
+              <select id="pub-language" class="w-full px-4 py-3 rounded-xl bg-zinc-950 border border-zinc-800 text-white text-sm focus:outline-none focus:border-amber-500">
+                <option value="Français">Français</option>
+                <option value="Anglais">Anglais</option>
+                <option value="Bilingue FR/EN">Bilingue FR/EN</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-zinc-300 mb-1.5">Prix (FCFA ou €) *</label>
+              <input type="text" id="pub-price" required value="3 500 FCFA (5,50 €)" placeholder="Ex: 3 500 FCFA ou Gratuit" class="w-full px-4 py-3 rounded-xl bg-zinc-950 border border-zinc-800 text-white text-sm focus:outline-none focus:border-amber-500" />
+            </div>
+            <div id="isbn-field-wrapper">
+              <label class="block text-xs font-medium text-zinc-300 mb-1.5">ISBN (Optionnel KDP)</label>
+              <input type="text" id="pub-isbn" placeholder="Ex: 979-8-2300-1122-4" class="w-full px-4 py-3 rounded-xl bg-zinc-950 border border-zinc-800 text-white text-sm font-mono focus:outline-none focus:border-amber-500" />
+            </div>
+          </div>
+
+          <!-- Description -->
+          <div>
+            <label class="block text-xs font-medium text-zinc-300 mb-1.5">Description détaillée (Quatrième de couverture) *</label>
+            <textarea id="pub-description" rows="3" required placeholder="Présentez le résumé, les bénéfices pour le lecteur et l'inspiration de votre œuvre..." class="w-full px-4 py-3 rounded-xl bg-zinc-950 border border-zinc-800 text-white text-sm focus:outline-none focus:border-amber-500"></textarea>
+          </div>
+
+          <!-- Extrait / Contenu lisible -->
+          <div id="excerpt-field-wrapper">
+            <label class="block text-xs font-medium text-zinc-300 mb-1.5">Extrait ou Chapitre 1 (pour la lecture directe sur le site) *</label>
+            <textarea id="pub-excerpt" rows="4" placeholder="Collez ici les premières pages ou un extrait captivant que les visiteurs pourront lire gratuitement..." class="w-full px-4 py-3 rounded-xl bg-zinc-950 border border-zinc-800 text-white text-sm focus:outline-none focus:border-amber-500"></textarea>
+          </div>
+
+          <!-- Mots-clés -->
+          <div>
+            <label class="block text-xs font-medium text-zinc-300 mb-1.5">Mots-clés (séparés par des virgules)</label>
+            <input type="text" id="pub-keywords" placeholder="Ex: réussite, motivation, PTKG23, Afrique, discipline" class="w-full px-4 py-3 rounded-xl bg-zinc-950 border border-zinc-800 text-white text-sm focus:outline-none focus:border-amber-500" />
+          </div>
+
+          <!-- Téléchargement de couverture & fichier -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4 rounded-2xl bg-zinc-950 border border-zinc-800">
+            <div>
+              <label class="block text-xs font-semibold text-amber-400 mb-1.5">Image de couverture / Visuel *</label>
+              <input type="file" id="pub-cover-file" accept="image/*" class="w-full text-xs text-zinc-400 file:mr-3 file:py-2 file:px-3 file:rounded-lg file:border-0 file:bg-amber-500/20 file:text-amber-400 file:font-semibold hover:file:bg-amber-500/30" />
+              <p class="text-[11px] text-zinc-500 mt-1">Formats JPG, PNG, WebP. Une couverture élégante est générée automatiquement si aucun fichier n'est choisi.</p>
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-zinc-300 mb-1.5">Fichier E-book (PDF / EPUB) ou Haute Définition</label>
+              <input type="file" id="pub-book-file" accept=".pdf,.epub,.txt,image/*" class="w-full text-xs text-zinc-400 file:mr-3 file:py-2 file:px-3 file:rounded-lg file:border-0 file:bg-zinc-800 file:text-zinc-200 file:font-semibold hover:file:bg-zinc-700" />
+              <p id="book-file-status" class="text-[11px] text-zinc-500 mt-1">Optionnel — associé à la fiche du livre.</p>
+            </div>
+          </div>
+
+          <!-- Boutons de soumission -->
+          <div class="flex flex-col sm:flex-row justify-end gap-3 pt-2">
+            <button type="button" onclick="navigateTo('catalog')" class="px-5 py-3 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-zinc-300 font-semibold text-sm transition">
+              Annuler
+            </button>
+            <button type="submit" class="px-6 py-3 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-zinc-950 font-extrabold text-sm shadow-lg shadow-amber-500/20 transition">
+              Publier maintenant dans le catalogue
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- VUE 3 : PROFIL UTILISATEUR / CRÉATEUR                               -->
+    <!-- =================================================================== -->
+    <section id="view-profile" class="hidden max-w-3xl w-full mx-auto px-4 py-6">
+      <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-5 sm:p-8 shadow-xl space-y-6">
+        <div class="flex items-center justify-between border-b border-zinc-800 pb-5">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-amber-400">Identité & Sécurité</span>
+            <h2 class="text-2xl font-extrabold text-white mt-1">Mon Profil Créateur / Membre</h2>
+          </div>
+          <button onclick="navigateTo('catalog')" class="px-3.5 py-2 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-xs font-semibold text-zinc-300 transition">
+            ← Catalogue
+          </button>
+        </div>
+
+        <form onsubmit="handleProfileSave(event)" class="space-y-6">
+          <!-- Photo de profil -->
+          <div class="flex flex-col sm:flex-row items-center gap-5 p-4 rounded-2xl bg-zinc-950 border border-zinc-800">
+            <img id="profile-preview-img" src="https://placehold.co/160x160/f59e0b/09090b?text=PTKG23" alt="Photo de profil" class="w-24 h-24 rounded-2xl object-cover border-2 border-amber-500 shadow-lg" />
+            <div class="space-y-2 text-center sm:text-left flex-1">
+              <h3 class="font-bold text-white text-sm">Photo de profil</h3>
+              <p class="text-xs text-zinc-400">Importez votre photo personnelle ou choisissez un avatar PTKG23.</p>
+              <div class="flex flex-wrap justify-center sm:justify-start gap-2 pt-1">
+                <label class="cursor-pointer px-3.5 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-zinc-950 font-bold text-xs transition">
+                  Changer la photo
+                  <input type="file" id="profile-photo-input" accept="image/*" onchange="previewProfilePhoto(event)" class="hidden" />
+                </label>
+                <button type="button" onclick="resetProfileAvatar()" class="px-3.5 py-2 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-zinc-300 font-semibold text-xs transition">
+                  Avatar par défaut
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Informations personnelles -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-medium text-zinc-300 mb-1.5">Nom complet *</label>
+              <input type="text" id="prof-name" required class="w-full px-4 py-3 rounded-xl bg-zinc-950 border border-zinc-800 text-white text-sm focus:outline-none focus:border-amber-500" />
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-zinc-300 mb-1.5">Numéro de téléphone *</label>
+              <input type="tel" id="prof-phone" required class="w-full px-4 py-3 rounded-xl bg-zinc-950 border border-zinc-800 text-white text-sm focus:outline-none focus:border-amber-500" />
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-medium text-zinc-300 mb-1.5">Code Créateur / Membre Unique *</label>
+            <div class="flex gap-2">
+              <input type="text" id="prof-code" required class="flex-1 px-4 py-3 rounded-xl bg-zinc-950 border border-zinc-800 text-amber-400 font-mono font-bold text-sm focus:outline-none focus:border-amber-500" />
+              <button type="button" onclick="regenerateMemberCode()" class="px-4 py-3 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-xs font-semibold text-white border border-zinc-700 whitespace-nowrap transition">
+                Générer un code
+              </button>
+            </div>
+            <p class="text-[11px] text-zinc-500 mt-1">Ce code identifie vos publications et vos liens de partage sur la plateforme.</p>
+          </div>
+
+          <div class="flex justify-end gap-3 pt-2">
+            <button type="submit" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-zinc-950 font-extrabold text-sm shadow-lg shadow-amber-500/20 transition">
+              Enregistrer mon profil
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Pied de page avec réseaux sociaux officiels & confidentialité -->
+    <footer class="max-w-7xl w-full mx-auto px-4 pt-10 pb-6 mt-auto border-t border-zinc-900">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="text-center md:text-left">
+          <p class="font-bold text-sm text-white">PTKG23 — Traoré Kader Georges</p>
+          <p class="text-xs text-zinc-400 mt-0.5">Plateforme officielle d'e-books, de musique et de création visuelle.</p>
+        </div>
+
+        <!-- Liens réseaux sociaux officiels -->
+        <div class="flex flex-wrap items-center justify-center gap-2">
+          <a href="https://www.facebook.com/search/top?q=PTKG23" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded-xl bg-zinc-900 hover:bg-blue-600/20 text-xs font-semibold text-zinc-300 hover:text-blue-400 border border-zinc-800 transition">
+            Facebook
+          </a>
+          <a href="https://www.tiktok.com/@ptkg23" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded-xl bg-zinc-900 hover:bg-pink-600/20 text-xs font-semibold text-zinc-300 hover:text-pink-400 border border-zinc-800 transition">
+            TikTok
+          </a>
+          <a href="https://www.youtube.com/@PTKG23" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded-xl bg-zinc-900 hover:bg-red-600/20 text-xs font-semibold text-zinc-300 hover:text-red-400 border border-zinc-800 transition">
+            YouTube
+          </a>
+          <a href="https://www.instagram.com/ptkg23" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded-xl bg-zinc-900 hover:bg-fuchsia-600/20 text-xs font-semibold text-zinc-300 hover:text-fuchsia-400 border border-zinc-800 transition">
+            Instagram
+          </a>
+          <button onclick="openPrivacyModal()" class="px-3 py-2 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-xs text-zinc-400 hover:text-amber-400 border border-zinc-800 transition">
+            Confidentialité
+          </button>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- 3. LECTEUR AUDIO PERSISTANT EN BAS DE L'ÉCRAN (STUDIO PTKG23)         -->
+  <!-- ===================================================================== -->
+  <div id="persistent-player" class="hidden fixed bottom-0 left-0 right-0 z-50 glass border-t border-amber-500/30 shadow-2xl">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 py-2.5 flex items-center justify-between gap-3">
+      <!-- Info morceau -->
+      <div class="flex items-center gap-3 min-w-0 flex-1">
+        <div id="player-disc" class="w-11 h-11 rounded-xl bg-gradient-to-tr from-amber-500 to-orange-600 flex items-center justify-center text-zinc-950 font-extrabold shrink-0 shadow">
+          🎵
+        </div>
+        <div class="min-w-0">
+          <p id="player-title" class="text-xs sm:text-sm font-bold text-white truncate">Sélectionnez un morceau PTKG23</p>
+          <p id="player-artist" class="text-[11px] text-amber-400 truncate">Traoré Kader Georges (PTKG23)</p>
+        </div>
+      </div>
+
+      <!-- Contrôles lecture -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <button onclick="prevTrack()" title="Morceau précédent" class="p-2 rounded-xl bg-zinc-800/90 hover:bg-zinc-700 text-zinc-200 transition">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
+        </button>
+        <button id="player-play-btn" onclick="togglePlayPause()" title="Lecture / Pause" class="w-10 h-10 rounded-xl bg-amber-500 hover:bg-amber-400 text-zinc-950 flex items-center justify-center shadow-lg shadow-amber-500/20 transition">
+          <svg id="icon-play" class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="icon-pause" class="w-5 h-5 fill-current hidden" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <button onclick="nextTrack()" title="Morceau suivant" class="p-2 rounded-xl bg-zinc-800/90 hover:bg-zinc-700 text-zinc-200 transition">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg>
+        </button>
+      </div>
+
+      <!-- Barre de progression (Desktop / Tablette) -->
+      <div class="hidden md:flex items-center gap-2.5 w-64 lg:w-80">
+        <span id="player-current-time" class="text-[11px] font-mono text-zinc-400 w-9 text-right">0:00</span>
+        <input type="range" id="player-seek" min="0" max="100" value="0" oninput="seekAudio(this.value)" class="flex-1 accent-amber-500 h-1.5 bg-zinc-800 rounded-lg cursor-pointer" />
+        <span id="player-duration" class="text-[11px] font-mono text-zinc-400 w-9">0:00</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- MODALE 1 : LECTEUR D'E-BOOK / APERÇU VISUEL                           -->
+  <!-- ===================================================================== -->
+  <div id="reader-modal" class="hidden fixed inset-0 z-[70] bg-black/80 backdrop-blur-sm flex items-center justify-center p-3 sm:p-6">
+    <div class="bg-zinc-900 border border-zinc-800 rounded-3xl max-w-2xl w-full max-h-[90vh] flex flex-col shadow-2xl overflow-hidden">
+      <div class="p-4 sm:p-5 border-b border-zinc-800 flex items-center justify-between gap-3">
+        <div class="min-w-0">
+          <span id="reader-badge" class="text-[11px] font-bold uppercase tracking-wider text-amber-400">Lecture d'extrait</span>
+          <h3 id="reader-title" class="text-base sm:text-lg font-extrabold text-white truncate">Titre du livre</h3>
+        </div>
+        <button onclick="closeModal('reader-modal')" class="p-2 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-zinc-300">
+          ✕
+        </button>
+      </div>
+
+      <div id="reader-body" class="p-5 sm:p-6 overflow-y-auto space-y-4 text-sm text-zinc-200 leading-relaxed">
+        <!-- Contenu injecté -->
+      </div>
+
+      <div class="p-4 border-t border-zinc-800 bg-zinc-950 flex flex-wrap items-center justify-between gap-2">
+        <button id="reader-buy-btn" class="px-4 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-zinc-950 font-bold text-xs sm:text-sm transition">
+          Acheter l'œuvre complète
+        </button>
+        <button id="reader-share-btn" class="px-4 py-2.5 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-white font-semibold text-xs sm:text-sm transition">
+          Partager sur les réseaux
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- MODALE 2 : BOUTIQUE & ACHAT (AMAZON KDP, PAYHIP, CHARIOW)             -->
+  <!-- ===================================================================== -->
+  <div id="buy-modal" class="hidden fixed inset-0 z-[70] bg-black/80 backdrop-blur-sm flex items-center justify-center p-3 sm:p-6">
+    <div class="bg-zinc-900 border border-zinc-800 rounded-3xl max-w-lg w-full p-5 sm:p-6 shadow-2xl space-y-5">
+      <div class="flex items-start justify-between gap-3">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-amber-400">Boutique Officielle PTKG23</span>
+          <h3 id="buy-title" class="text-xl font-extrabold text-white mt-0.5">Acheter cet E-book</h3>
+          <p id="buy-price" class="text-sm font-bold text-emerald-400 mt-1">3 500 FCFA (5,50 €)</p>
+        </div>
+        <button onclick="closeModal('buy-modal')" class="p-2 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-zinc-300">✕</button>
+      </div>
+
+      <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed">
+        Choisissez votre plateforme préférée pour acquérir immédiatement la version intégrale de cette œuvre de <strong>Traoré Kader Georges (PTKG23)</strong> :
+      </p>
+
+      <div class="space-y-2.5">
+        <!-- Amazon KDP -->
+        <a id="link-kdp" href="https://www.amazon.com/s?k=Traore+Kader+Georges+PTKG23" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-3.5 rounded-2xl bg-zinc-950 hover:bg-zinc-800 border border-zinc-800 hover:border-amber-500/50 transition group">
+          <div>
+            <span class="font-bold text-sm text-white block group-hover:text-amber-400">Amazon KDP (Kindle & Broché)</span>
+            <span class="text-xs text-zinc-400">Distribution internationale sécurisée</span>
+          </div>
+          <span class="px-3 py-1.5 rounded-lg bg-amber-500/15 text-amber-400 text-xs font-bold">Commander →</span>
+        </a>
+
+        <!-- Payhip / Boutique PTKG -->
+        <a id="link-payhip" href="https://ptkg.myshopify.com" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-3.5 rounded-2xl bg-zinc-950 hover:bg-zinc-800 border border-zinc-800 hover:border-sky-500/50 transition group">
+          <div>
+            <span class="font-bold text-sm text-white block group-hover:text-sky-400">Payhip & Boutique PTKG</span>
+            <span class="text-xs text-zinc-400">Téléchargement direct PDF / EPUB (ptkg.myshopify.com)</span>
+          </div>
+          <span class="px-3 py-1.5 rounded-lg bg-sky-500/15 text-sky-400 text-xs font-bold">Acheter →</span>
+        </a>
+
+        <!-- Chariow -->
+        <a id="link-chariow" href="https://chariow.com" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-3.5 rounded-2xl bg-zinc-950 hover:bg-zinc-800 border border-zinc-800 hover:border-emerald-500/50 transition group">
+          <div>
+            <span class="font-bold text-sm text-white block group-hover:text-emerald-400">Chariow (Mobile Money & Carte)</span>
+            <span class="text-xs text-zinc-400">Paiement rapide Orange Money, Moov, Wave & Visa</span>
+          </div>
+          <span class="px-3 py-1.5 rounded-lg bg-emerald-500/15 text-emerald-400 text-xs font-bold">Payer →</span>
+        </a>
+      </div>
+
+      <div class="pt-2 border-t border-zinc-800 flex items-center justify-between text-xs text-zinc-400">
+        <span>Besoin d'aide ? Contact créateur disponible.</span>
+        <button onclick="closeModal('buy-modal')" class="text-zinc-300 hover:text-white font-semibold">Fermer</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- MODALE 3 : PARTAGE SOCIAL AVEC LIEN DE RETOUR VERS LA PLATEFORME       -->
+  <!-- ===================================================================== -->
+  <div id="share-modal" class="hidden fixed inset-0 z-[70] bg-black/80 backdrop-blur-sm flex items-center justify-center p-3 sm:p-6">
+    <div class="bg-zinc-900 border border-zinc-800 rounded-3xl max-w-lg w-full p-5 sm:p-6 shadow-2xl space-y-5">
+      <div class="flex items-start justify-between gap-3">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-amber-400">Diffusion & Communauté</span>
+          <h3 id="share-item-title" class="text-lg font-extrabold text-white mt-0.5">Partager cette création</h3>
+        </div>
+        <button onclick="closeModal('share-modal')" class="p-2 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-zinc-300">✕</button>
+      </div>
+
+      <p class="text-xs text-zinc-300 leading-relaxed">
+        Partagez cette œuvre sur vos réseaux sociaux. Le message inclut automatiquement un <strong>lien de retour direct</strong> qui ramène vos lecteurs sur la plateforme PTKG23 pour découvrir d'autres livres ou publier les leurs.
+      </p>
+
+      <!-- Aperçu du message & lien de retour -->
+      <div class="p-3.5 rounded-2xl bg-zinc-950 border border-zinc-800 space-y-2">
+        <label class="text-[11px] font-semibold text-zinc-400 block">Message prêt à publier avec lien de retour :</label>
+        <textarea id="share-message-box" rows="3" readonly class="w-full bg-transparent text-xs text-zinc-200 focus:outline-none resize-none"></textarea>
+        <button onclick="copyShareLink()" class="w-full py-2 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-amber-400 font-bold text-xs transition">
+          📋 Copier le message et le lien de retour
+        </button>
+      </div>
+
+      <!-- Boutons réseaux sociaux -->
+      <div class="grid grid-cols-2 gap-2.5">
+        <button onclick="shareToNetwork('facebook')" class="p-3 rounded-xl bg-blue-600/20 hover:bg-blue-600/30 border border-blue-500/40 text-blue-300 font-bold text-xs flex items-center justify-center gap-2 transition">
+          Facebook
+        </button>
+        <button onclick="shareToNetwork('tiktok')" class="p-3 rounded-xl bg-pink-600/20 hover:bg-pink-600/30 border border-pink-500/40 text-pink-300 font-bold text-xs flex items-center justify-center gap-2 transition">
+          TikTok
+        </button>
+        <button onclick="shareToNetwork('youtube')" class="p-3 rounded-xl bg-red-600/20 hover:bg-red-600/30 border border-red-500/40 text-red-300 font-bold text-xs flex items-center justify-center gap-2 transition">
+          YouTube
+        </button>
+        <button onclick="shareToNetwork('instagram')" class="p-3 rounded-xl bg-fuchsia-600/20 hover:bg-fuchsia-600/30 border border-fuchsia-500/40 text-fuchsia-300 font-bold text-xs flex items-center justify-center gap-2 transition">
+          Instagram
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- MODALE 4 : POLITIQUE DE CONFIDENTIALITÉ & CONDITIONS D'UTILISATION    -->
+  <!-- ===================================================================== -->
+  <div id="privacy-modal" class="hidden fixed inset-0 z-[80] bg-black/80 backdrop-blur-sm flex items-center justify-center p-3 sm:p-6">
+    <div class="bg-zinc-900 border border-zinc-800 rounded-3xl max-w-xl w-full max-h-[85vh] flex flex-col shadow-2xl overflow-hidden">
+      <div class="p-5 border-b border-zinc-800 flex items-center justify-between">
+        <h3 class="text-lg font-extrabold text-white">Confidentialité & Conditions — PTKG23</h3>
+        <button onclick="closeModal('privacy-modal')" class="p-2 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-zinc-300">✕</button>
+      </div>
+      <div class="p-5 overflow-y-auto space-y-3 text-xs sm:text-sm text-zinc-300 leading-relaxed">
+        <p><strong>1. Protection des données personnelles :</strong> Les informations de profil (nom complet, photo, code membre et numéro de téléphone) sont utilisées uniquement pour identifier vos publications et sécuriser votre accès à la plateforme de <strong>Traoré Kader Georges (PTKG23)</strong>.</p>
+        <p><strong>2. Propriété intellectuelle :</strong> Chaque auteur ou créateur conserve l'intégralité de ses droits sur les e-books, musiques et visuels publiés. Toute reproduction non autorisée des œuvres de PTKG23 est interdite.</p>
+        <p><strong>3. Transactions externes sécurisées :</strong> Les achats d'e-books s'effectuent via les plateformes partenaires officielles (Amazon KDP, Payhip / ptkg.myshopify.com et Chariow).</p>
+        <p><strong>4. Sauvegarde locale :</strong> Vos préférences, votre profil et vos créations ajoutées sont sauvegardés localement sur votre appareil pour une utilisation fluide et rapide.</p>
+      </div>
+      <div class="p-4 border-t border-zinc-800 bg-zinc-950 text-right">
+        <button onclick="closeModal('privacy-modal')" class="px-5 py-2.5 rounded-xl bg-amber-500 text-zinc-950 font-bold text-xs">
+          J'ai compris
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- SCRIPT JAVASCRIPT COMPLET                                             -->
+  <!-- ===================================================================== -->
+  <script>
+    // -----------------------------------------------------------------------
+    // 1. DONNÉES INITIALES (E-BOOKS, MUSIQUE PTKG23, IMAGES & VISUELS)
+    // -----------------------------------------------------------------------
+    const DEFAULT_ITEMS = [
+      {
+        id: 'book-1',
+        type: 'ebook',
+        title: 'Atteindre mes objectifs',
+        subtitle: 'Méthode concrète de discipline, de clarté mentale et d’action quotidienne',
+        author: 'Traoré Kader Georges (PTKG23)',
+        category: 'Développement personnel',
+        language: 'Français',
+        price: '3 500 FCFA (5,50 €)',
+        isbn: '979-8-2300-2301-1',
+        keywords: 'objectifs, réussite, discipline, PTKG23, motivation',
+        cover: 'https://placehold.co/600x800/18181b/f59e0b?text=ATTEINDRE+MES+OBJECTIFS%0APTKG23',
+        description: 'Un guide pratique et inspirant conçu par Traoré Kader Georges pour transformer vos ambitions en résultats mesurables, étape par étape, sans procrastination.',
+        excerpt: `CHAPITRE 1 : LA CLARTÉ AVANT LA VITESSE\n\nBeaucoup avancent avec énergie, mais sans boussole. Atteindre ses objectifs commence toujours par une décision ferme : définir exactement ce que l'on veut bâtir et refuser ce qui disperse notre attention.\n\n1. Écrivez votre vision avec précision.\n2. Découpez chaque grand rêve en actions quotidiennes de 30 minutes.\n3. Mesurez vos progrès chaque dimanche soir sans vous juger, mais avec honnêteté.\n\nLa constance bat toujours l'intensité passagère. Votre avenir se construit aujourd'hui.`,
+        kdpUrl: 'https://www.amazon.com/s?k=Atteindre+mes+objectifs+Traore+Kader+Georges',
+        payhipUrl: 'https://ptkg.myshopify.com',
+        chariowUrl: 'https://chariow.com'
+      },
+      {
+        id: 'book-2',
+        type: 'ebook',
+        title: "L'orgueil ne conduit à rien",
+        subtitle: "Réflexions profondes sur l'humilité, la sagesse et l'élévation humaine",
+        author: 'Traoré Kader Georges (PTKG23)',
+        category: 'Sagesse & Philosophie',
+        language: 'Français',
+        price: '3 000 FCFA (4,90 €)',
+        isbn: '979-8-2300-2302-8',
+        keywords: 'humilité, sagesse, relations, paix, PTKG23',
+        cover: 'https://placehold.co/600x800/27272a/fbbf24?text=L%27ORGUEIL+NE+CONDUIT+A+RIEN%0APTKG23',
+        description: "Une œuvre percutante sur les pièges de l'ego et la force tranquille de l'humilité. Comment préserver ses relations, apprendre des autres et grandir durablement.",
+        excerpt: `INTRODUCTION : LE MUR INVISIBLE DE L'EGO\n\nL'orgueil donne l'illusion d'être au-dessus des autres, alors qu'il nous isole de ceux qui pourraient nous aider à grandir. Celui qui refuse d'écouter se condamne à répéter ses propres erreurs.\n\nL'humilité n'est pas de la faiblesse : c'est la lucidité de savoir que chaque rencontre porte une leçon et que la vraie grandeur se mesure à notre capacité à respecter et élever autrui.`,
+        kdpUrl: 'https://www.amazon.com/s?k=L+orgueil+ne+conduit+a+rien+Traore+Kader+Georges',
+        payhipUrl: 'https://ptkg.myshopify.com',
+        chariowUrl: 'https://chariow.com'
+      },
+      {
+        id: 'music-1',
+        type: 'music',
+        title: 'Horizon Doré (Instrumental Inspirant)',
+        subtitle: 'Session Studio PTKG23 • Ambiance lecture & concentration',
+        author: 'PTKG23 (Traoré Kader Georges)',
+        category: 'Afro-Soul & Ambient',
+        language: 'Instrumental',
+        price: 'Écoute gratuite',
+        keywords: 'musique, PTKG23, instrumental, concentration',
+        cover: 'https://placehold.co/600x600/0f172a/38bdf8?text=PTKG23+STUDIO%0AHORIZON+DORE',
+        description: 'Une composition mélodique originale signée PTKG23, idéale pour accompagner vos séances de lecture et de réflexion.',
+        trackIndex: 0
+      },
+      {
+        id: 'music-2',
+        type: 'music',
+        title: 'Détermination 23 (Afro-Beat Mélodique)',
+        subtitle: 'Single Officiel PTKG23 • Énergie & Persévérance',
+        author: 'PTKG23 (Traoré Kader Georges)',
+        category: 'Afro-Urbain',
+        language: 'Français',
+        price: 'Écoute gratuite',
+        keywords: 'afrobeat, PTKG23, énergie, motivation',
+        cover: 'https://placehold.co/600x600/1e1b4b/f59e0b?text=PTKG23+SOUND%0ADETERMINATION+23',
+        description: 'Rythmes chaleureux et harmonies modernes créés par Traoré Kader Georges pour célébrer le courage et la persévérance.',
+        trackIndex: 1
+      },
+      {
+        id: 'image-1',
+        type: 'image',
+        title: 'Affiche Officielle — Vision & Discipline',
+        subtitle: 'Création graphique haute définition PTKG23',
+        author: 'Traoré Kader Georges (PTKG23)',
+        category: 'Art Visuel & Design',
+        language: 'Français',
+        price: 'Libre partage',
+        keywords: 'visuel, affiche, citation, PTKG23',
+        cover: 'https://placehold.co/800x600/18181b/f59e0b?text=%C2%AB+L%27humilit%C3%A9+ouvre+les+portes+que+l%27orgueil+verrouille.+%C2%BB%0A—+PTKG23',
+        description: 'Visuel officiel issu de la collection littéraire PTKG23, prêt à être partagé sur vos réseaux sociaux avec lien de retour vers la bibliothèque.'
+      }
+    ];
+
+    // Pistes synthétisées via Web Audio API (zéro dépendance externe bloquante)
+    const AUDIO_TRACKS = [
+      {
+        title: 'Horizon Doré (Instrumental Inspirant)',
+        artist: 'PTKG23 — Traoré Kader Georges',
+        durationSec: 135,
+        notes: [261.63, 329.63, 392.00, 493.88, 392.00, 329.63, 293.66, 349.23],
+        tempoMs: 520
+      },
+      {
+        title: 'Détermination 23 (Afro-Beat Mélodique)',
+        artist: 'PTKG23 — Traoré Kader Georges',
+        durationSec: 158,
+        notes: [220.00, 261.63, 329.63, 392.00, 440.00, 392.00, 329.63, 293.66],
+        tempoMs: 380
+      }
+    ];
+
+    // -----------------------------------------------------------------------
+    // 2. ÉTAT DE L'APPLICATION & PERSISTANCE LOCALSTORAGE
+    // -----------------------------------------------------------------------
+    let catalogItems = [];
+    let currentUser = null;
+    let activeFilter = 'all';
+    let currentShareItem = null;
+
+    // État du lecteur audio
+    let audioCtx = null;
+    let isPlaying = false;
+    let currentTrackIdx = 0;
+    let trackProgressSec = 0;
+    let playerInterval = null;
+    let noteStep = 0;
+
+    function loadState() {
+      try {
+        const savedItems = localStorage.getItem('ptkg23_catalog');
+        catalogItems = savedItems ? JSON.parse(savedItems) : [...DEFAULT_ITEMS];
+
+        const savedUser = localStorage.getItem('ptkg23_user');
+        if (savedUser) {
+          currentUser = JSON.parse(savedUser);
+          enterMainApp(false);
+        }
+      } catch (e) {
+        catalogItems = [...DEFAULT_ITEMS];
+      }
+    }
+
+    function saveCatalog() {
+      try {
+        localStorage.setItem('ptkg23_catalog', JSON.stringify(catalogItems));
+      } catch (e) {
+        showToast('Attention : espace de stockage local limité pour les images volumineuses.', 'warning');
+      }
+    }
+
+    function saveUser() {
+      if (currentUser) {
+        localStorage.setItem('ptkg23_user', JSON.stringify(currentUser));
+      }
+    }
+
+    // -----------------------------------------------------------------------
+    // 3. NOTIFICATIONS TOAST (SANS ALERT)
+    // -----------------------------------------------------------------------
+    function showToast(message, type = 'success') {
+      const container = document.getElementById('toast-container');
+      const toast = document.createElement('div');
+      const colors = type === 'error'
+        ? 'bg-red-950/95 border-red-500/50 text-red-200'
+        : type === 'warning'
+        ? 'bg-amber-950/95 border-amber-500/50 text-amber-200'
+        : 'bg-zinc-900/95 border-emerald-500/50 text-emerald-200';
+
+      toast.className = `pointer-events-auto px-4 py-3 rounded-2xl border shadow-xl text-xs sm:text-sm font-medium flex items-center justify-between gap-3 transition-all ${colors}`;
+      toast.innerHTML = `<span>${message}</span><button onclick="this.parentElement.remove()" class="text-xs opacity-70 hover:opacity-100">✕</button>`;
+      container.appendChild(toast);
+
+      setTimeout(() => {
+        if (toast.parentElement) toast.remove();
+      }, 4200);
+    }
+
+    // -----------------------------------------------------------------------
+    // 4. PORTAIL D'ENTRÉE, INSCRIPTION, CONNEXION & PROFIL
+    // -----------------------------------------------------------------------
+    function switchAuthTab(tab) {
+      const loginForm = document.getElementById('login-form');
+      const regForm = document.getElementById('register-form');
+      const loginBtn = document.getElementById('tab-login-btn');
+      const regBtn = document.getElementById('tab-register-btn');
+
+      if (tab === 'login') {
+        loginForm.classList.remove('hidden');
+        regForm.classList.add('hidden');
+        loginBtn.className = 'py-2.5 rounded-xl text-sm font-semibold bg-amber-500 text-zinc-950 transition';
+        regBtn.className = 'py-2.5 rounded-xl text-sm font-semibold text-zinc-400 hover:text-white transition';
+      } else {
+        regForm.classList.remove('hidden');
+        loginForm.classList.add('hidden');
+        regBtn.className = 'py-2.5 rounded-xl text-sm font-semibold bg-amber-500 text-zinc-950 transition';
+        loginBtn.className = 'py-2.5 rounded-xl text-sm font-semibold text-zinc-400 hover:text-white transition';
+      }
+    }
+
+    function generateCode(name) {
+      const prefix = (name || 'PTKG').replace(/[^a-zA-Z]/g, '').substring(0, 4).toUpperCase() || 'PTKG';
+      const rand = Math.floor(1000 + Math.random() * 9000);
+      return `${prefix}-${rand}`;
+    }
+
+    function handleLogin(e) {
+      e.preventDefault();
+      const identifier = document.getElementById('login-identifier').value.trim();
+      const phone = document.getElementById('login-phone').value.trim();
+
+      const saved = localStorage.getItem('ptkg23_user');
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        parsed.phone = phone || parsed.phone;
+        if (identifier && !identifier.includes('-')) parsed.name = identifier;
+        currentUser = parsed;
+      } else {
+        currentUser = {
+          name: identifier,
+          phone: phone,
+          code: identifier.includes('-') ? identifier.toUpperCase() : generateCode(identifier),
+          avatar: `https://placehold.co/160x160/f59e0b/09090b?text=${encodeURIComponent(identifier.substring(0, 2).toUpperCase())}`
+        };
+      }
+      saveUser();
+      enterMainApp(true);
+    }
+
+    function handleRegister(e) {
+      e.preventDefault();
+      const name = document.getElementById('reg-name').value.trim();
+      const phone = document.getElementById('reg-phone').value.trim();
+      const customCode = document.getElementById('reg-code').value.trim();
+      const fileInput = document.getElementById('reg-photo');
+
+      const finalizeUser = (avatarDataUrl) => {
+        currentUser = {
+          name,
+          phone,
+          code: customCode ? customCode.toUpperCase() : generateCode(name),
+          avatar: avatarDataUrl || `https://placehold.co/160x160/f59e0b/09090b?text=${encodeURIComponent(name.substring(0, 2).toUpperCase())}`
+        };
+        saveUser();
+        enterMainApp(true);
+      };
+
+      if (fileInput.files && fileInput.files[0]) {
+        const reader = new FileReader();
+        reader.onload = (ev) => finalizeUser(ev.target.result);
+        reader.readAsDataURL(fileInput.files[0]);
+      } else {
+        finalizeUser(null);
+      }
+    }
+
+    function quickAccess(role) {
+      if (role === 'creator') {
+        currentUser = {
+          name: 'Traoré Kader Georges (PTKG23)',
+          phone: '+226 70 23 23 23',
+          code: 'PTKG-2300',
+          avatar: 'https://placehold.co/160x160/f59e0b/09090b?text=PTKG23'
+        };
+      } else {
+        currentUser = {
+          name: 'Lecteur Invité',
+          phone: 'Non renseigné',
+          code: generateCode('VIS'),
+          avatar: 'https://placehold.co/160x160/27272a/fbbf24?text=VIP'
+        };
+      }
+      saveUser();
+      enterMainApp(true);
+    }
+
+    function enterMainApp(notify = true) {
+      document.getElementById('auth-portal').classList.add('hidden');
+      document.getElementById('main-app').classList.remove('hidden');
+      document.getElementById('persistent-player').classList.remove('hidden');
+      syncUserUI();
+      renderCatalog();
+      if (notify && currentUser) {
+        showToast(`Bienvenue ${currentUser.name} (${currentUser.code}) !`);
+      }
+    }
+
+    function lockPortal() {
+      document.getElementById('main-app').classList.add('hidden');
+      document.getElementById('persistent-player').classList.add('hidden');
+      document.getElementById('auth-portal').classList.remove('hidden');
+      showToast('Vous êtes revenu sur le portail sécurisé.');
+    }
+
+    function syncUserUI() {
+      if (!currentUser) return;
+      document.getElementById('header-username').textContent = currentUser.name;
+      document.getElementById('header-usercode').textContent = currentUser.code;
+      document.getElementById('header-avatar').src = currentUser.avatar;
+
+      document.getElementById('prof-name').value = currentUser.name;
+      document.getElementById('prof-phone').value = currentUser.phone;
+      document.getElementById('prof-code').value = currentUser.code;
+      document.getElementById('profile-preview-img').src = currentUser.avatar;
+
+      const pubAuthor = document.getElementById('pub-author');
+      if (pubAuthor && !pubAuthor.value) {
+        pubAuthor.value = currentUser.name;
+      }
+    }
+
+    function previewProfilePhoto(e) {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = (ev) => {
+        document.getElementById('profile-preview-img').src = ev.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function resetProfileAvatar() {
+      const name = document.getElementById('prof-name').value || 'PT';
+      document.getElementById('profile-preview-img').src = `https://placehold.co/160x160/f59e0b/09090b?text=${encodeURIComponent(name.substring(0, 2).toUpperCase())}`;
+    }
+
+    function regenerateMemberCode() {
+      const name = document.getElementById('prof-name').value || 'PTKG';
+      document.getElementById('prof-code').value = generateCode(name);
+    }
+
+    function handleProfileSave(e) {
+      e.preventDefault();
+      currentUser.name = document.getElementById('prof-name').value.trim();
+      currentUser.phone = document.getElementById('prof-phone').value.trim();
+      currentUser.code = document.getElementById('prof-code').value.trim().toUpperCase();
+      currentUser.avatar = document.getElementById('profile-preview-img').src;
+      saveUser();
+      syncUserUI();
+      showToast('Votre profil créateur a été mis à jour avec succès !');
+    }
+
+    // -----------------------------------------------------------------------
+    // 5. NAVIGATION ENTRE LES VUES
+    // -----------------------------------------------------------------------
+    function navigateTo(viewName) {
+      ['catalog', 'publish', 'profile'].forEach(v => {
+        document.getElementById(`view-${v}`).classList.add('hidden');
+      });
+      document.getElementById(`view-${viewName}`).classList.remove('hidden');
+
+      document.querySelectorAll('.nav-pill').forEach(btn => {
+        if (btn.dataset.nav === viewName) {
+          btn.className = 'nav-pill px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-zinc-800 text-amber-400 border border-amber-500/30 whitespace-nowrap transition';
+        } else {
+          btn.className = 'nav-pill px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold text-zinc-400 hover:text-white bg-zinc-900/70 border border-zinc-800 whitespace-nowrap transition';
+        }
+      });
+
+      if (viewName === 'publish' && currentUser) {
+        document.getElementById('pub-author').value = currentUser.name;
+      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // -----------------------------------------------------------------------
+    // 6. CATALOGUE FILTRABLE (E-BOOKS, MUSIQUE, IMAGES)
+    // -----------------------------------------------------------------------
+    function setCategoryFilter(filter) {
+      activeFilter = filter;
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        if (btn.dataset.filter === filter) {
+          btn.className = 'filter-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-amber-500 text-zinc-950 whitespace-nowrap transition';
+        } else {
+          btn.className = 'filter-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-zinc-900 text-zinc-300 hover:text-white border border-zinc-800 whitespace-nowrap transition';
+        }
+      });
+      renderCatalog();
+    }
+
+    function renderCatalog() {
+      const grid = document.getElementById('catalog-grid');
+      const query = (document.getElementById('search-input').value || '').toLowerCase().trim();
+
+      const filtered = catalogItems.filter(item => {
+        const matchesCat = activeFilter === 'all' || item.type === activeFilter;
+        const searchable = `${item.title} ${item.subtitle || ''} ${item.author} ${item.category} ${item.keywords || ''}`.toLowerCase();
+        const matchesQuery = !query || searchable.includes(query);
+        return matchesCat && matchesQuery;
+      });
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full p-10 rounded-3xl bg-zinc-900 border border-zinc-800 text-center space-y-3">
+            <p class="text-zinc-300 font-semibold">Aucune création trouvée pour cette recherche.</p>
+            <button onclick="setCategoryFilter('all'); document.getElementById('search-input').value=''; renderCatalog();" class="px-4 py-2 rounded-xl bg-amber-500 text-zinc-950 font-bold text-xs">
+              Réinitialiser les filtres
+            </button>
+          </div>
+        `;
+        return;
+      }
+
+      grid.innerHTML = filtered.map(item => {
+        const badgeInfo = item.type === 'ebook'
+          ? { label: '📚 E-book', cls: 'bg-amber-500/15 text-amber-400 border-amber-500/30' }
+          : item.type === 'music'
+          ? { label: '🎵 Musique PTKG23', cls: 'bg-emerald-500/15 text-emerald-400 border-emerald-500/30' }
+          : { label: '🖼️ Visuel', cls: 'bg-sky-500/15 text-sky-400 border-sky-500/30' };
+
+        let actionButtons = '';
+        if (item.type === 'ebook') {
+          actionButtons = `
+            <div class="grid grid-cols-2 gap-2 pt-2">
+              <button onclick="openReaderModal('${item.id}')" class="px-3 py-2.5 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-white font-semibold text-xs transition">
+                📖 Lire l'extrait
+              </button>
+              <button onclick="openBuyModal('${item.id}')" class="px-3 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-zinc-950 font-bold text-xs shadow transition">
+                🛒 Acheter
+              </button>
+            </div>
+            <div class="grid grid-cols-2 gap-2 pt-1.5">
+              <button onclick="navigateTo('publish')" class="px-3 py-2 rounded-xl bg-zinc-950 hover:bg-zinc-800 text-zinc-300 border border-zinc-800 text-[11px] font-medium transition">
+                + Publier un livre
+              </button>
+              <button onclick="openShareModal('${item.id}')" class="px-3 py-2 rounded-xl bg-zinc-950 hover:bg-zinc-800 text-amber-400 border border-zinc-800 text-[11px] font-semibold transition">
+                ↗ Partager
+              </button>
+            </div>
+          `;
+        } else if (item.type === 'music') {
+          actionButtons = `
+            <div class="grid grid-cols-2 gap-2 pt-2">
+              <button onclick="playTrackByIndex(${item.trackIndex || 0})" class="px-3 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-zinc-950 font-bold text-xs shadow transition">
+                ▶ Écouter maintenant
+              </button>
+              <button onclick="openShareModal('${item.id}')" class="px-3 py-2.5 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-white font-semibold text-xs transition">
+                ↗ Partager le son
+              </button>
+            </div>
+          `;
+        } else {
+          actionButtons = `
+            <div class="grid grid-cols-2 gap-2 pt-2">
+              <button onclick="openReaderModal('${item.id}')" class="px-3 py-2.5 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-white font-semibold text-xs transition">
+                🔍 Agrandir
+              </button>
+              <button onclick="openShareModal('${item.id}')" class="px-3 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-zinc-950 font-bold text-xs shadow transition">
+                ↗ Partager
+              </button>
+            </div>
+          `;
+        }
+
+        return `
+          <article class="bg-zinc-900 border border-zinc-800 hover:border-zinc-700 rounded-3xl overflow-hidden flex flex-col justify-between shadow-lg transition group">
+            <div>
+              <div class="relative aspect-[16/11] bg-zinc-950 overflow-hidden">
+                <img src="${item.cover}" alt="${item.title}" onerror="this.src='https://placehold.co/600x400/18181b/f59e0b?text=PTKG23'" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+                <span class="absolute top-3 left-3 px-2.5 py-1 rounded-lg text-[11px] font-bold border backdrop-blur-md ${badgeInfo.cls}">
+                  ${badgeInfo.label}
+                </span>
+                <span class="absolute bottom-3 right-3 px-2.5 py-1 rounded-lg text-[11px] font-bold bg-zinc-950/90 text-white border border-zinc-800">
+                  ${item.price}
+                </span>
+              </div>
+
+              <div class="p-4 sm:p-5 space-y-2">
+                <div class="flex items-center justify-between text-[11px] text-zinc-400">
+                  <span>${item.category}</span>
+                  ${item.publisherCode ? `<span class="font-mono text-amber-400">Code: ${item.publisherCode}</span>` : ''}
+                </div>
+                <h3 class="font-extrabold text-base sm:text-lg text-white leading-snug">${item.title}</h3>
+                ${item.subtitle ? `<p class="text-xs text-amber-400/90 font-medium line-clamp-1">${item.subtitle}</p>` : ''}
+                <p class="text-xs text-zinc-400 line-clamp-2 leading-relaxed">${item.description}</p>
+                <p class="text-[11px] text-zinc-500 pt-1">Par <strong class="text-zinc-300">${item.author}</strong></p>
+              </div>
+            </div>
+
+            <div class="px-4 sm:px-5 pb-4 sm:pb-5">
+              ${actionButtons}
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+
+    // -----------------------------------------------------------------------
+    // 7. PUBLICATION D'E-BOOK ET D'IMAGE (AJOUT IMMÉDIAT AU CATALOGUE)
+    // -----------------------------------------------------------------------
+    function togglePublishFields() {
+      const type = document.querySelector('input[name="pub-type"]:checked').value;
+      const isbnWrap = document.getElementById('isbn-field-wrapper');
+      const excerptWrap = document.getElementById('excerpt-field-wrapper');
+      if (type === 'image') {
+        isbnWrap.classList.add('hidden');
+        excerptWrap.classList.add('hidden');
+      } else {
+        isbnWrap.classList.remove('hidden');
+        excerptWrap.classList.remove('hidden');
+      }
+    }
+
+    function handlePublishSubmit(e) {
+      e.preventDefault();
+      const type = document.querySelector('input[name="pub-type"]:checked').value;
+      const title = document.getElementById('pub-title').value.trim();
+      const subtitle = document.getElementById('pub-subtitle').value.trim();
+      const author = document.getElementById('pub-author').value.trim();
+      const category = document.getElementById('pub-category').value;
+      const language = document.getElementById('pub-language').value;
+      const price = document.getElementById('pub-price').value.trim() || 'Gratuit';
+      const isbn = document.getElementById('pub-isbn').value.trim();
+      const description = document.getElementById('pub-description').value.trim();
+      const excerpt = document.getElementById('pub-excerpt').value.trim();
+      const keywords = document.getElementById('pub-keywords').value.trim();
+      const coverInput = document.getElementById('pub-cover-file');
+      const bookFileInput = document.getElementById('pub-book-file');
+
+      const attachedFileName = (bookFileInput.files && bookFileInput.files[0]) ? bookFileInput.files[0].name : '';
+
+      const createAndSave = (coverDataUrl) => {
+        const newItem = {
+          id: 'pub-' + Date.now(),
+          type,
+          title,
+          subtitle,
+          author,
+          publisherCode: currentUser ? currentUser.code : 'PTKG-MEMBRE',
+          category,
+          language,
+          price,
+          isbn,
+          keywords,
+          cover: coverDataUrl || `https://placehold.co/600x800/18181b/f59e0b?text=${encodeURIComponent(title.substring(0, 24))}`,
+          description,
+          excerpt: excerpt || description,
+          attachedFileName,
+          kdpUrl: `https://www.amazon.com/s?k=${encodeURIComponent(title + ' ' + author)}`,
+          payhipUrl: 'https://ptkg.myshopify.com',
+          chariowUrl: 'https://chariow.com'
+        };
+
+        catalogItems.unshift(newItem);
+        saveCatalog();
+        document.getElementById('publish-form').reset();
+        togglePublishFields();
+        setCategoryFilter('all');
+        navigateTo('catalog');
+        showToast(`« ${title} » a été publié avec succès dans le catalogue !`);
+      };
+
+      if (coverInput.files && coverInput.files[0]) {
+        const reader = new FileReader();
+        reader.onload = (ev) => createAndSave(ev.target.result);
+        reader.readAsDataURL(coverInput.files[0]);
+      } else {
+        createAndSave(null);
+      }
+    }
+
+    // -----------------------------------------------------------------------
+    // 8. MODALES (LECTURE, ACHAT KDP/PAYHIP/CHARIOW, PARTAGE SOCIAL)
+    // -----------------------------------------------------------------------
+    function openReaderModal(itemId) {
+      const item = catalogItems.find(i => i.id === itemId);
+      if (!item) return;
+
+      document.getElementById('reader-badge').textContent = item.type === 'ebook' ? `Extrait E-book • ${item.language}` : 'Aperçu Visuel HD';
+      document.getElementById('reader-title').textContent = item.title;
+
+      const body = document.getElementById('reader-body');
+      if (item.type === 'ebook') {
+        body.innerHTML = `
+          <div class="flex flex-col sm:flex-row gap-4 p-4 rounded-2xl bg-zinc-950 border border-zinc-800">
+            <img src="${item.cover}" alt="${item.title}" class="w-24 h-32 rounded-xl object-cover shrink-0 mx-auto sm:mx-0" />
+            <div class="space-y-1.5 text-xs">
+              <p class="text-amber-400 font-bold">${item.subtitle || item.category}</p>
+              <p class="text-zinc-300">Auteur : <strong>${item.author}</strong></p>
+              ${item.isbn ? `<p class="text-zinc-400 font-mono">ISBN : ${item.isbn}</p>` : ''}
+              ${item.attachedFileName ? `<p class="text-emerald-400">Fichier joint : ${item.attachedFileName}</p>` : ''}
+              <p class="text-zinc-400 pt-1">${item.description}</p>
+            </div>
+          </div>
+          <div class="p-4 sm:p-5 rounded-2xl bg-zinc-950/90 border border-zinc-800 whitespace-pre-line font-normal text-zinc-200 leading-relaxed">
+            ${item.excerpt || item.description}
+          </div>
+        `;
+        document.getElementById('reader-buy-btn').classList.remove('hidden');
+        document.getElementById('reader-buy-btn').onclick = () => {
+          closeModal('reader-modal');
+          openBuyModal(item.id);
+        };
+      } else {
+        body.innerHTML = `
+          <img src="${item.cover}" alt="${item.title}" class="w-full rounded-2xl border border-zinc-800 object-contain max-h-[55vh] mx-auto bg-zinc-950" />
+          <p class="text-xs sm:text-sm text-zinc-300">${item.description}</p>
+        `;
+        document.getElementById('reader-buy-btn').classList.add('hidden');
+      }
+
+      document.getElementById('reader-share-btn').onclick = () => {
+        closeModal('reader-modal');
+        openShareModal(item.id);
+      };
+
+      document.getElementById('reader-modal').classList.remove('hidden');
+    }
+
+    function openBuyModal(itemId) {
+      const item = catalogItems.find(i => i.id === itemId);
+      if (!item) return;
+
+      document.getElementById('buy-title').textContent = item.title;
+      document.getElementById('buy-price').textContent = item.price;
+      document.getElementById('link-kdp').href = item.kdpUrl || 'https://www.amazon.com/s?k=Traore+Kader+Georges+PTKG23';
+      document.getElementById('link-payhip').href = item.payhipUrl || 'https://ptkg.myshopify.com';
+      document.getElementById('link-chariow').href = item.chariowUrl || 'https://chariow.com';
+
+      document.getElementById('buy-modal').classList.remove('hidden');
+    }
+
+    function openShareModal(itemId) {
+      const item = catalogItems.find(i => i.id === itemId);
+      if (!item) return;
+      currentShareItem = item;
+
+      const returnUrl = window.location.href.split('#')[0];
+      const msg = `Découvrez « ${item.title} » par ${item.author} sur la plateforme officielle PTKG23 ! Lisez d'autres livres ou publiez les vôtres ici : ${returnUrl}`;
+
+      document.getElementById('share-item-title').textContent = `Partager : ${item.title}`;
+      document.getElementById('share-message-box').value = msg;
+      document.getElementById('share-modal').classList.remove('hidden');
+    }
+
+    function copyShareLink() {
+      const textarea = document.getElementById('share-message-box');
+      textarea.select();
+      textarea.setSelectionRange(0, 99999);
+      try {
+        document.execCommand('copy');
+        showToast('Message et lien de retour copiés dans le presse-papiers !');
+      } catch (err) {
+        showToast('Sélectionnez et copiez le texte ci-dessus.', 'warning');
+      }
+    }
+
+    function shareToNetwork(network) {
+      copyShareLink();
+      const returnUrl = encodeURIComponent(window.location.href.split('#')[0]);
+      const shareText = encodeURIComponent(document.getElementById('share-message-box').value);
+
+      const urls = {
+        facebook: `https://www.facebook.com/sharer/sharer.php?u=${returnUrl}&quote=${shareText}`,
+        tiktok: `https://www.tiktok.com/@ptkg23`,
+        youtube: `https://www.youtube.com/@PTKG23`,
+        instagram: `https://www.instagram.com/ptkg23`
+      };
+
+      window.open(urls[network], '_blank', 'noopener,noreferrer');
+    }
+
+    function openPrivacyModal() {
+      document.getElementById('privacy-modal').classList.remove('hidden');
+    }
+
+    function closeModal(modalId) {
+      document.getElementById(modalId).classList.add('hidden');
+    }
+
+    // -----------------------------------------------------------------------
+    // 9. LECTEUR AUDIO PERSISTANT (SYNTHÈSE MÉLODIQUE WEB AUDIO API)
+    // -----------------------------------------------------------------------
+    function formatTime(sec) {
+      const m = Math.floor(sec / 60);
+      const s = Math.floor(sec % 60);
+      return `${m}:${s < 10 ? '0' : ''}${s}`;
+    }
+
+    function playSynthNote(freq) {
+      try {
+        if (!audioCtx) {
+          audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        }
+        if (audioCtx.state === 'suspended') {
+          audioCtx.resume();
+        }
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+
+        gain.gain.setValueAtTime(0.001, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.08, audioCtx.currentTime + 0.06);
+        gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 0.45);
+
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start();
+        osc.stop(audioCtx.currentTime + 0.46);
+      } catch (e) {
+        // Ignore si bloqué avant geste utilisateur
+      }
+    }
+
+    function updatePlayerUI() {
+      const track = AUDIO_TRACKS[currentTrackIdx];
+      document.getElementById('player-title').textContent = track.title;
+      document.getElementById('player-artist').textContent = track.artist;
+      document.getElementById('player-duration').textContent = formatTime(track.durationSec);
+      document.getElementById('player-current-time').textContent = formatTime(trackProgressSec);
+      document.getElementById('player-seek').value = Math.min(100, (trackProgressSec / track.durationSec) * 100);
+
+      const iconPlay = document.getElementById('icon-play');
+      const iconPause = document.getElementById('icon-pause');
+      const disc = document.getElementById('player-disc');
+
+      if (isPlaying) {
+        iconPlay.classList.add('hidden');
+        iconPause.classList.remove('hidden');
+        disc.classList.add('animate-pulse');
+      } else {
+        iconPlay.classList.remove('hidden');
+        iconPause.classList.add('hidden');
+        disc.classList.remove('animate-pulse');
+      }
+    }
+
+    function startAudioLoop() {
+      clearInterval(playerInterval);
+      const track = AUDIO_TRACKS[currentTrackIdx];
+      let msCounter = 0;
+
+      playerInterval = setInterval(() => {
+        if (!isPlaying) return;
+        msCounter += 250;
+
+        if (msCounter % track.tempoMs < 250) {
+          const note = track.notes[noteStep % track.notes.length];
+          playSynthNote(note);
+          noteStep++;
+        }
+
+        if (msCounter >= 1000) {
+          msCounter = 0;
+          trackProgressSec++;
+          if (trackProgressSec >= track.durationSec) {
+            nextTrack();
+            return;
+          }
+          updatePlayerUI();
+        }
+      }, 250);
+    }
+
+    function playTrackByIndex(idx) {
+      currentTrackIdx = idx % AUDIO_TRACKS.length;
+      trackProgressSec = 0;
+      noteStep = 0;
+      isPlaying = true;
+      updatePlayerUI();
+      startAudioLoop();
+      showToast(`Lecture : ${AUDIO_TRACKS[currentTrackIdx].title}`);
+    }
+
+    function togglePlayPause() {
+      isPlaying = !isPlaying;
+      updatePlayerUI();
+      if (isPlaying) {
+        startAudioLoop();
+      } else {
+        clearInterval(playerInterval);
+      }
+    }
+
+    function nextTrack() {
+      playTrackByIndex((currentTrackIdx + 1) % AUDIO_TRACKS.length);
+    }
+
+    function prevTrack() {
+      playTrackByIndex((currentTrackIdx - 1 + AUDIO_TRACKS.length) % AUDIO_TRACKS.length);
+    }
+
+    function seekAudio(percent) {
+      const track = AUDIO_TRACKS[currentTrackIdx];
+      trackProgressSec = Math.floor((percent / 100) * track.durationSec);
+      updatePlayerUI();
+    }
+
+    // Initialisation au chargement
+    window.addEventListener('DOMContentLoaded', () => {
+      loadState();
+      updatePlayerUI();
+    });
+  </script>
+</body>
+</html>
